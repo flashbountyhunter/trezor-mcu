@@ -1,3 +1,17 @@
+*This repo has been created to temporarily provide custom Trezor firmware which supports FLASH.  Once the FLASH support has been integrated into the main Trezor repositories and the official Trezor firmware has been updated to support FLASH then this repo will no longer be needed.*
+ #### The custom version of Trezor's v1.6.3 firmware which supports FLASH is [trezor-1.6.3f.bin](https://github.com/flashbountyhunter/trezor-mcu/raw/master/trezor-v1.6.3f.bin)
+ ## How to install this custom firmware
+1. Install Trezor's [python-trezor](https://github.com/trezor/python-trezor) utility
+2. Download [trezor-1.6.3f.bin](https://github.com/flashbountyhunter/trezor-mcu/raw/master/trezor-v1.6.3f.bin)
+3. Ensure you have your Trezor's recovery seed backed up, it will be needed to restore after flashing
+4. Disconnect your Trezor, then hold both buttons while plugging it in.  This will cause it to enter the bootloader and allow the firmware to be updated.
+5. Use `trezorctl` from `python-trezor` to install the firmware:
+```trezorctl firmware_update -f trezor-1.6.3f.bin```
+6. Follow the prompts until the upgrade is complete
+7. Disconnect and reconnect your Trezor, and then follow the [Recovery Guide](https://doc.satoshilabs.com/trezor-user/recovery.html) to restore your Trezor
+ This is firmware is not yet official so you will see prompts on your Trezor indicating this.  The fingerprint of this unofficial firmware is `63858f10eb49d38bc69cef9b7ef42b697c352690a13c4dc2ee1765d3f74bb1fe`.
+ 
+ 
 # TREZOR One Bootloader and Firmware
 
 [![Build Status](https://travis-ci.org/trezor/trezor-mcu.svg?branch=master)](https://travis-ci.org/trezor/trezor-mcu) [![gitter](https://badges.gitter.im/trezor/community.svg)](https://gitter.im/trezor/community)

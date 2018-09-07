@@ -8,3 +8,4 @@ set -e
 cd "$(dirname "$0")/.."
 
 git submodule update --init --recursive
+git submodule update --init --remote -- vendor/trezor-common
